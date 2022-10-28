@@ -3,16 +3,16 @@
     justify-content: center;
     align-items: center;
   
-    width: 80%;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   
-    margin: auto;
+    margin: 0.5rem;
   }
   
   .card-container {
     position: relative;
   
-    width: 36rem;
+    width: 80%;
     height: 22rem;
   }
   
@@ -30,7 +30,7 @@
   
     font-size: 3rem;
   
-    color: gray;
+    // color: gray;
   }
   
   .card-container svg:hover {
@@ -38,24 +38,24 @@
     color: blue;
   }
   
-  article {
+  article { //contenedor de la imagen y descripcion
     position: absolute;
-    width: 12rem;
+    width: 60%;
     height: 100%;
   
     transition: all 1s;
   }
   
-  .card {
+  .card { // Imagen
     position: absolute;
   
-    height: 20rem;
-    width: 10rem;
+    height: 100%;
+    width: 100%;
   
     margin: 1rem;
   
-    background-color: gray;
-  
+    
+   
     border-radius: 1rem;
   
     text-align: center;
@@ -64,6 +64,17 @@
     box-sizing: border-box;
   
     user-select: none;
+    z-index:0;
+  }
+  .nombre{
+    position: absolute;
+    background-color:rgba(0,0,0,0.65);
+    z-index:1;
+    width: 100%;
+    margin-left: 1rem;
+    margin-top: 17.4rem;
+    text-align: center;
+    color:#D0B8A8;
   }
   
   .card:hover {
@@ -71,8 +82,8 @@
   }
   
   .card img {
-    height: 15rem;
-    width: 10rem;
+    height: 95%;
+    width: 100%;
   
     object-fit: cover;
     object-position: top;
@@ -130,7 +141,7 @@
     width: 100%;
     height: 2px;
   
-    background-color: gray;
+    // background-color: gray;
   }
   
   .dot {
@@ -139,7 +150,7 @@
   
     border-radius: 50%;
   
-    background-color: gray;
+    // background-color: gray;
     z-index: 1;
   
     transition: all 1s;
@@ -150,7 +161,7 @@
   }
   
   .dot.active {
-    box-shadow: 0 0 0 4px grey;
+    // box-shadow: 0 0 0 4px grey;
     background-color: white;
   }
   

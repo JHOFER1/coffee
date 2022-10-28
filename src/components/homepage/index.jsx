@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './index.scss';
 import Card from "./slidercards/card.jsx";
+import {Article1} from "./articles";
 // import Paginator from "./components/Paginator";
 
 import { data } from "./data";
@@ -9,10 +10,9 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-
-function Homepage() {
+// export const Search = (props) => {
+export const Homepage=()=> {
   const [index, setIndex] = useState(0);
-
   const slideLeft = () => {
     if (index - 1 >= 0) {
       setIndex(index - 1);
@@ -111,7 +111,7 @@ function Homepage() {
   };
 
   return (
-    <div className="App">
+    <>
       <div className="container">
         <div className="card-container">
           {/* <Paginator
@@ -144,7 +144,8 @@ function Homepage() {
           })}
         </div>
       </div>
-    </div>
+      <Article1/>      
+      </>
   );
 }
 

@@ -7,6 +7,9 @@ const Card = ({ handlePointerEvent, name, img, cardStyle }) => {
           onTouchStart={handlePointerEvent}
         >
           <img src={img} alt={name} />
+
+        </div>
+        <div className="nombre">
           <h2>{name}</h2>
         </div>
       </article>
