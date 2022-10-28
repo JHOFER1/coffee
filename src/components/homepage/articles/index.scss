@@ -1,58 +1,50 @@
 @import "../../../const/variables.scss";
 
     .containerMainArt {
-        
-        width: 75%;
-        height: 100%;
-        display:flex;
-        flex-direction: justify;
-        // justify-content: left;
-        // align-items: center;
-        background-size:cover;
-        background-repeat: no-repeat;
-    }
-
-    .containerArt {
-        
         width: 100%;
         height: 100%;
-        display:flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        // flex-direction: justify;
+        justify-content: center;
+        // align-items: center;
+        // background-size:cover;
+        // background-repeat: no-repeat;
+    }
+    .containerArt {   
+        display: flex;
         flex-direction: column;
-        justify-content: left;
+        margin-top: 2%;
+        margin-bottom:2%;
+        margin-left: 4vh; 
+        margin-right:4vh;
+        width: 45vw;
+        height: 100%;
+        text-align: justify;
+        justify-content: center;
         align-items: center;
-        background-size:cover;
-        background-repeat: no-repeat;
+        // background-size:cover;
+        // background-repeat: no-repeat;
+    }
+    .imagenposter{
+        width: 35vw;
+        height: 50%;
+    
     }
 
-        .welcome-test1 {
-            font-size: 2em;
-            color:$primary;
-            text-align: justify;
-            display:flex;
-            flex-direction: row;
-            justify-items: center;
-            align-items: center;
-            padding: 0 10vh;
+    @media handheld, only screen and (max-width: 767px) {
+        .containerArt {
+            width: 100vw;
         }
-
-        .description-test {
-            font-size: 1.2em;
-            color:$primary;
-            text-align: justify;
-            display:flex;
-            flex-direction: row;
-            justify-items: center;
-            align-items: center;
-            padding: 0 5vh;
-        }
-
+    }
+    @media handheld, only screen and (max-width: 767px) {
         .imagenposter {
-            max-width: 50%;
-            max-height: 50%;
-    
+            width: 100%;
         }
+    }
 
-        .information-button{
+ .information-button{
             margin-top: 20px;
             margin-bottom: 20px;
             width: 10%;
@@ -67,6 +59,7 @@
                 color: $white;
                 text-decoration: none;
             }
-
+        
 
         }
+

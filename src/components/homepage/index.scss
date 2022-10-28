@@ -6,15 +6,22 @@
     width: 100%;
     height: 100%;
   
-    margin: 0.5rem;
+    margin: 0.1rem;
   }
   
   .card-container {
     position: relative;
   
     width: 80%;
-    height: 22rem;
+    height: 25rem;
   }
+
+  @media handheld, only screen and (max-width: 767px) {
+    .card-container {
+      height: 10rem;
+    }
+
+}
   
   .background-block {
     position: absolute;
@@ -45,6 +52,17 @@
   
     transition: all 1s;
   }
+
+  @media handheld, only screen and (max-width: 767px) {
+    article {
+      width: 81%;
+    }
+    .card-container svg {
+      top: 50%;
+    }
+}
+
+
   
   .card { // Imagen
     position: absolute;
@@ -72,7 +90,7 @@
     z-index:1;
     width: 100%;
     margin-left: 1rem;
-    margin-top: 17.4rem;
+    margin-top: 20.4rem;
     text-align: center;
     color:#D0B8A8;
   }
@@ -165,7 +183,7 @@
     background-color: white;
   }
   
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 767px) {
     .container {
       width: 100%;
       overflow: hidden;

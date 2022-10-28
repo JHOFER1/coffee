@@ -7,14 +7,12 @@ const Header= () => {
 return(
     <>
     <header className="header-container">
-        <ul>
-            <li>
-            <Link to="/">
+        <Link to="/">
                 <div className="img1">
                 <Logo/>
                 </div>
-            </Link>
-            </li>
+        </Link>
+        <ul>
 
             <li>
             <Link to="/peliculas">Course</Link>
@@ -25,7 +23,7 @@ return(
             </li>
             
             <li>
-            <Link to="/anime">commins soon</Link>
+            <Link to="/anime">commin soon</Link>
             </li>
         </ul>
         <div className="search-container">
