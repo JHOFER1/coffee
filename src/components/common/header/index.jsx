@@ -15,7 +15,7 @@ return(
         <ul>
 
             <li>
-            <Link to="/peliculas">Course</Link>
+            <Link to="/courses">Course</Link>
             </li>
 
             <li>
