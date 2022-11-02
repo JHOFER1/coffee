@@ -7,17 +7,7 @@ import logout from './img/log-out.png';
 import './index.scss';
 import React, {useState, useEffect, useRef} from 'react';
 
-function DropdownItem(props){
-    return(
-      <li className = 'dropdownItem'>
-        <img src={props.img}></img>
-        <a> {props.text} </a>
-      </li>
-    );
-  }
-
 const Courses=()=>{
-
 const [open, setOpen] = useState(false); //Inicializamos una variable de estado en false
 let menuRef = useRef();//
 
@@ -30,8 +20,6 @@ useEffect(() => {
     };
 
     document.addEventListener("mousedown", handler);
-    
-
     return() =>{
       document.removeEventListener("mousedown", handler);
     }
@@ -42,52 +30,39 @@ return(
 <>  <div className="mainContainerCourses">
         <div className="courserContainer">
             <h1>Curso de React</h1>
-            <img className='imagenCourses' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcwHGcKYqvBVG0u5WT2aYpbKBaxnIw2pvuWA&usqp=CAU' alt="Cursos"/>
+              <img className='imagenCourses' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcwHGcKYqvBVG0u5WT2aYpbKBaxnIw2pvuWA&usqp=CAU' alt="Cursos"/>
             <h3>Diseña tus pagins web y React se encargara de actualizar y renderizar
                 de manera eficiente los componentes
             </h3>
-            <div className='menu-container' ref={menuRef}>
-                <div className='menu-trigger' onClick={()=>{setOpen(!open)}}>
+
+                  <div className='menu-container' ref={menuRef}>
+                    <div className='menu-trigger' onClick={()=>{setOpen(!open)}}>
                     <button className='buttonCourser'>Acciones</button>
-                </div>
-            <div className={`dropdown-menu ${open? 'active': 'inactive'}`}>
-                <h3>Menu<br/><span> Descripcion</span></h3>
-                <ul>
-                 <DropdownItem img = {user} text = {"My Profile"}/>
-                 <DropdownItem img = {edit} text = {"Edit Profile"}/>
-                 <DropdownItem img = {inbox} text = {"Inbox"}/>
-                 <DropdownItem img = {settings} text = {"Settings"}/>
-                 <DropdownItem img = {help} text = {"Helps"}/>
-                 <DropdownItem img = {logout} text = {"Logout"}/>
-                </ul>
-            </div>                
-            </div>
-        </div>
-
-
-
-        <div className="courserContainer">
-            <h1>Curso de React</h1>
-            <h3>Diseña tus pagins web y React se encargara de actualizar y renderizar
-                de manera eficiente los componentes
-            </h3>
-        
-            <div className="buttonContainer">
-                <button className='buttonCourser'></button>
-            </div>
-        </div>
-        <div className="courserContainer">
-            <h1>Curso de React</h1>
-            <h3>Diseña tus pagins web y React se encargara de actualizar y renderizar
-                de manera eficiente los componentes
-            </h3>
-        
-            <div className="buttonContainer">
-                <button className='buttonCourser'></button>
-            </div>
+                    </div>
+                      <div className={`dropdown-menu ${open? 'active':'inactive'}`}>
+                        {/* <h3 className='h3Courser'>Menu<br/><span> Descripcion</span></h3> */}
+                        <ul className='ulDropdown'>
+                        <DropdownItem img = {user} text = {"My Profile"}/>
+                        <DropdownItem img = {edit} text = {"Edit Profile"}/>
+                        <DropdownItem img = {inbox} text = {"Inbox"}/>
+                        <DropdownItem img = {settings} text = {"Settings"}/>
+                        <DropdownItem img = {help} text = {"Helps"}/>
+                        <DropdownItem img = {logout} text = {"Logout"}/>
+                        </ul>
+                      </div>                
+                  </div>
         </div>
     </div>
 </>    
-)
+);
 }
-export default Courses
+
+function DropdownItem(props){
+  return(
+    <li className='dropdownItem'>
+      <img src={props.img}></img>
+      <a>{props.text}</a>
+    </li>
+  );
+}
+export default Courses;
