@@ -4,8 +4,7 @@ import Header from './components/common/header';
 import Footer from './components/common/footer';
 import Routes from './routes';
 function App() {
-    return(
-    
+    return(    
     <BrowserRouter>
     <Header/>
     <Routes/>

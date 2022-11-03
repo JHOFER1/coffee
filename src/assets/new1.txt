@@ -1,1 +1,1 @@
-React makes it painless to create interactice UIs. Design simple views for each state in your application, and Reac will efficientlly update and render just the right components when your data changes.
+React makes it painless to create interactice UIs.
