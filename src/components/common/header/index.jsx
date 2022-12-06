@@ -1,8 +1,10 @@
+import Sign from "./registerEnter";
 import {React} from "react";
 import './index.scss';
 import {Link} from 'react-router-dom';
 import Search from '../searchBar';
 import Logo from "../logoinicio";
+import Register from "../../register";
 const Header= () => {
 return(
     <>
@@ -27,9 +29,14 @@ return(
             </li>
         </ul>
         <div className="search-container">
-        <Search />
+        <Search/>
         </div>
-
+        <div>
+            <Register/>
+        </div>
+        <div>
+            <Sign/>
+        </div>
       
     </header>
     </>
